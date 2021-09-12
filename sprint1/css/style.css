@@ -1,0 +1,24 @@
+.nav_bar { 
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    
+}
+
+ul { list-style: none;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    background-color: gray;
+    
+}
+
+li {
+    float:left;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+li:hover{ background-color:cadetblue}

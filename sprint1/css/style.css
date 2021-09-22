@@ -1,4 +1,56 @@
-html, body{
+:root {
+  --primary-color: rgb( 13, 110, 253 );
+  --secondary-color: rgb( 108, 117, 125 );
+  --light-color: rgb( 248, 249, 250 );
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+#nav_bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: var(--secondary-color);
+}
+#nav_bar ul {
+  display: flex;
+  justify-content: space-around;
+}
+#nav_bar ul li {
+  flex: auto;
+  padding: 1rem;
+  list-style: none;
+  transition: all ease .5s;
+}
+#nav_bar ul li:hover {
+  background-color: var(--primary-color);
+  transition: all ease .5s;
+}
+#nav_bar ul li a {
+  color: var(--light-color);
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+#nav_bar ul li button#Registerbutton {
+  margin: auto;
+  border-radius: 0;
+  width: 50px;
+  height: 30px;
+  text-overflow: ellipsis;
+  margin: auto;
+  transition: all ease .5s;
+}
+#nav_bar ul li button#Registerbutton:active {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  transition: all ease .5s;
+}
+p{
+  margin-top: 4rem;
+}
+/* html, body{
     margin: 0;
     padding: 0;
     height: 100%;
@@ -34,4 +86,4 @@ li {
     text-decoration: none;
 }
 
-li:hover{ background-color:cadetblue}
+li:hover{ background-color:cadetblue} */

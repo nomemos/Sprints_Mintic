@@ -35,3 +35,37 @@ li {
 }
 
 li:hover{ background-color:cadetblue}
+
+#formRegistro{
+border: 1px solid darkblue;
+  height: 200px;
+  width: 100px;
+}
+
+#campoNombre{
+    border-color: rgb(52, 163, 24);
+}
+
+#campoUsuario{
+    border-color: rgb(52, 163, 24);
+}
+
+#campoContraseña{
+    border-color: rgb(52, 163, 24);
+}
+
+#campoTelefono{
+    border-color: rgb(52, 163, 24);
+}
+
+#campoCorreo{
+    border-color: rgb(52, 163, 24);
+}
+
+#campoConfirmacion{
+    border-color: rgb(52, 163, 24);
+}
+
+#campoDireccion{
+    border-color: rgb(52, 163, 24);
+}

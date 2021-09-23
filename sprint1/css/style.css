@@ -34,4 +34,16 @@ li {
     text-decoration: none;
 }
 
+#Registerbutton{
+    width: 30px;
+    height: 50px;
+    cursor: pointer;
+    background-color: cornflowerblue;
+    transition: background-color 0.5s;
+}
+
+#Registerbutton{
+    text-align: center;
+}
+
 li:hover{ background-color:cadetblue}

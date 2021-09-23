@@ -34,6 +34,18 @@ li {
     text-decoration: none;
 }
 
+#Registerbutton{
+    width: 30px;
+    height: 50px;
+    cursor: pointer;
+    background-color: cornflowerblue;
+    transition: background-color 0.5s;
+}
+
+#Registerbutton{
+    text-align: center;
+}
+
 li:hover{ background-color:cadetblue}
 
 #formRegistro{
@@ -43,29 +55,30 @@ border: 1px solid darkblue;
 }
 
 #campoNombre{
-    border-color: rgb(52, 163, 24);
+
+    border: 2px SOLID rgb(52, 163, 24);
 }
 
 #campoUsuario{
-    border-color: rgb(52, 163, 24);
+    border: 2px SOLID rgb(52, 163, 24);
 }
 
 #campoContraseña{
-    border-color: rgb(52, 163, 24);
+    border: 2px SOLID rgb(52, 163, 24);
 }
 
 #campoTelefono{
-    border-color: rgb(52, 163, 24);
+    border: 2px SOLID rgb(52, 163, 24);
 }
 
 #campoCorreo{
-    border-color: rgb(52, 163, 24);
+    border: 2px SOLID rgb(52, 163, 24);
 }
 
 #campoConfirmacion{
-    border-color: rgb(52, 163, 24);
+    border: 2px SOLID rgb(52, 163, 24);
 }
 
 #campoDireccion{
-    border-color: rgb(52, 163, 24);
+    border: 2px SOLID rgb(52, 163, 24);
 }

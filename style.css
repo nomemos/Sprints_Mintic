@@ -153,3 +153,13 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.parrafo{
+  font-size: 12pt;
+  color: black;
+}
+
+.parrafo.ampliado{
+  font-size: 20pt;
+  color: red;
+}
+

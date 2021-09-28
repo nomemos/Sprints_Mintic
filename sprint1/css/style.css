@@ -41,9 +41,8 @@
 }
 
 .front {
-  display: block;
-  position: relative;
-  padding: 12px 42px;
+  display: flex;
+  padding: 6px 21px;
   border-radius: 12px;
   font-size: 1.25rem;
   color: white;
@@ -95,7 +94,7 @@
 /* AQUI ESTA EL CSS DEL SEGUNDO BOTON*/
 .switch {
   position: relative;
-  display: inline-block;
+  display: flex;
   width: 60px;
   height: 34px;
 }

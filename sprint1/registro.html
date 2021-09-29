@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="formRegistro">
-    <form action="text">
+    <form action="text" name="Validacion">
         
         <label for="">nombre
             <input id="campoNombre" type="text" placeholder="Ingrese su nombre completo">
@@ -25,11 +25,11 @@
         </label>
         <br>
         <label for="">Teléfono móvil
-            <input id="campoTelefono"type="text" placeholder="Ingrese su número del móvil">
+            <input id="campoTelefono" name="campoTelefono" onfocusout="validar_telefono2()" type="text" placeholder="Ingrese su número del móvil">
         </label>
         <br>
         <label for="">Dirección
-            <input id="campoDireccion" type="text" placeholder="Dirección de residencia">
+            <input id="campoDireccion" name="campoDireccion" onfocusout="validar_direccion2()" type="text" placeholder="Dirección de residencia">
         </label>
         <br>
         <label for="">Correo Eléctronico
@@ -50,7 +50,7 @@
 
 
 </div>
-
+<script src="js/form3.js"></script>
 
 </body>
 </html>

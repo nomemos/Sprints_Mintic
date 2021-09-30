@@ -3,7 +3,9 @@ function validar_telefono(string){
     var myArray = myRe.test(string)
     console.log(myArray)
     if (!myArray){
-        alert("Su numero telefonico no cumple con los requisitos");
+        return false;
+    } else {
+        return true;
     }
 }
 
@@ -15,10 +17,12 @@ function validar_direccion(string){
         var myArray = myRe.test(string)
         console.log(myArray)
         if (!myArray){
-            alert("Su direccion no cumple con los requisitos");
+           return false;
+        } else {
+            return true;
         }
     } else {
-        alert("Su direccion no cumple con los requisitos");
+        return false;
     }
     
 }

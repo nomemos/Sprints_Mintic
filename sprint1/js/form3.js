@@ -5,35 +5,24 @@ function validar_telefono(string){
     if (!myArray){
         alert("Su numero telefonico no cumple con los requisitos");
     }
-    /* if (string.length>6&&string.length<=10){
-        
-    else {
-        alert("Su numero telefonico no cumple con los requisitos");
-    }
-    }*/
-}
-
-function validar_telefono2(){
-    var telefono=document.Validacion.campoTelefono;
-    console.log (telefono.value);
-    validar_telefono(telefono.value);
 }
 
 function validar_direccion(string){
-    var myRe = /^(\Carrera|Transversal|Circular|Calle)[ -]*{7,30}[ -]*$/
-    var myArray = myRe.test(string)
-    console.log(myArray)
-    if (!myArray){
+    var myRe = /^(Carrera|Transversal|Circular|Calle)[ ]*[0-9a-zA-Z]*[ ]*[a-zA-Z]*[ ]*[#][ ]*([0-9]*[A-Za-z]*[ ]*[-]*[ ]*[0-9]*[A-Za-z]*)/
+    console.log( string, string.length );
+
+    if ( string.length >= 7 && string.length <= 30 ) {
+        var myArray = myRe.test(string)
+        console.log(myArray)
+        if (!myArray){
+            alert("Su direccion no cumple con los requisitos");
+        }
+    } else {
         alert("Su direccion no cumple con los requisitos");
     }
-}
-
-function validar_direccion2(){
-    var direccion=document.Validacion.campoDireccion;
-    console.log (direccion.value);
-    validar_direccion(direccion.value);
+    
 }
 
 
-/*module.exports.validar_telefono = validar_telefono;
-module.exports.validar_direccion = validar_direccion;*/
+module.exports.validar_telefono = validar_telefono;
+module.exports.validar_direccion = validar_direccion;

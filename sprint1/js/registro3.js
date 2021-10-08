@@ -18,27 +18,59 @@ function buscarDominio2 () {
     console.log( 'retornarCuenta ', retornarCuenta( nuevoArreglo ) );
 } */
 
+arreglo = [{
+    campoNombre: "",
+    usuario: "",
+    password: "",
+    campoTelefono: "",
+    direccion: "",
+    campoCorreo: ""
+}];
 
-function buscarDominio( arreglo ) {
-  return arreglo.filter( element => {
+function buscarDominio(  ) {
+    let nuevoArreglo = [
+        {
+            campoNombre: "",
+            usuario: "",
+            password: "",
+            campoTelefono: "",
+            direccion: "",
+            campoCorreo: ""
+        }
+    ];
+    for ( let i = 0; i < arreglo.length; i++ ) {
+        if ( arreglo[i].campoCorreo.split( '@' )[1] == 'upb.edu.co' ) {
+            nuevoArreglo.push( arreglo[i] );
+        }
+    }
+    return nuevoArreglo;
+  /* return arreglo.filter( element => {
     if ( element.campoCorreo.split( '@' )[1] == 'upb.edu.co' ) {
         return element;
     }
-  } );
+  } ); */
 }
 
 function retornarCuenta( args ) {
     console.log( args );
     let cuenta = 0;
-    args.forEach( element => {
+    for ( let i = 0; i < args.length; i++ ) {
+        if ( args[i].campoNombre.includes( 'a' ) ) {
+            if ( args[i].campoTelefono.slice( -1 ) == '4' || args[i].campoTelefono.slice( -1 ) == '0' ) {
+                cuenta++;
+            }
+        }
+    }
+    /* args.forEach( element => {
         if ( element.campoNombre.includes( 'a' ) ) {
             if ( element.campoTelefono.slice( -1 ) == '4' || element.campoTelefono.slice( -1 ) == '0' ) {
                 cuenta++;
             }
         }
-    });
+    }); */
     return cuenta;
 }
 
+module.exports.arreglo = arreglo;
 module.exports.buscarDominio = buscarDominio;
 module.exports.retornarCuenta = retornarCuenta;

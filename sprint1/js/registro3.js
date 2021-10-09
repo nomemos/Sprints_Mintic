@@ -18,29 +18,23 @@ function buscarDominio2 () {
     console.log( 'retornarCuenta ', retornarCuenta( nuevoArreglo ) );
 } */
 
-arreglo = [{
-    campoNombre: "",
-    usuario: "",
-    password: "",
-    campoTelefono: "",
-    direccion: "",
-    campoCorreo: ""
-}];
+let registros = [];
 
 function buscarDominio(  ) {
-    let nuevoArreglo = [
-        {
-            campoNombre: "",
-            usuario: "",
-            password: "",
-            campoTelefono: "",
-            direccion: "",
-            campoCorreo: ""
-        }
-    ];
-    for ( let i = 0; i < arreglo.length; i++ ) {
-        if ( arreglo[i].campoCorreo.split( '@' )[1] == 'upb.edu.co' ) {
-            nuevoArreglo.push( arreglo[i] );
+    let objeto = {
+        'nombre': document.getElementById('campoNombre').value,
+        'usuario': document.getElementById('campoUsuario').value,
+        'direccion': document.getElementById('campoDireccion').value,
+        'contrasena': document.getElementById('campoContrasena').value,
+        'correo': document.getElementById('campoCorreo').value,
+        'confirmacioncorreo': document.getElementById('campoConfirmacionCorreo').value,
+        'telefono': document.getElementById('campoTelefono').value
+    };
+    registros.push( objeto );
+    let nuevoArreglo = [];
+    for ( let i = 0; i < registros.length; i++ ) {
+        if ( registros[i].correo.includes( 'upb.edu.co' ) ) {
+            nuevoArreglo.push( registros[i] );
         }
     }
     return nuevoArreglo;
@@ -55,8 +49,8 @@ function retornarCuenta( args ) {
     console.log( args );
     let cuenta = 0;
     for ( let i = 0; i < args.length; i++ ) {
-        if ( args[i].campoNombre.includes( 'a' ) ) {
-            if ( args[i].campoTelefono.slice( -1 ) == '4' || args[i].campoTelefono.slice( -1 ) == '0' ) {
+        if ( args[i].nombre.includes( 'a' ) ) {
+            if ( args[i].telefono.slice( -1 ) == '4' || args[i].telefono.slice( -1 ) == '0' ) {
                 cuenta++;
             }
         }
@@ -71,6 +65,6 @@ function retornarCuenta( args ) {
     return cuenta;
 }
 
-module.exports.arreglo = arreglo;
+//module.exports.arreglo = arreglo;
 module.exports.buscarDominio = buscarDominio;
 module.exports.retornarCuenta = retornarCuenta;
